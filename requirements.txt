@@ -1,6 +1,7 @@
 fastapi
 uvicorn
+pydantic
 langchain
 langchain-ollama
 ollama
-pydantic
+jinja2
