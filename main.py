@@ -4,9 +4,9 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import LLMChain
 from typing import List, Dict
-from questions import questions, Question
 from fastapi.responses import HTMLResponse
 from jinja2 import Environment, FileSystemLoader
+from fastapi.middleware.cors import CORSMiddleware
 
 # Initialize the model and prompt template
 model = OllamaLLM(model="llama3")
@@ -24,6 +24,16 @@ chain = LLMChain(llm=model, prompt=prompt)
 
 # Define the FastAPI app
 app = FastAPI()
+
+# Allow CORS
+origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Define request and response models
 class UserInput(BaseModel):
