@@ -5,7 +5,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import LLMChain
 from typing import List, Dict
 from questions import questions, Question
-from resume_format import format_resume
+from fastapi.responses import HTMLResponse
+from jinja2 import Environment, FileSystemLoader
 
 # Initialize the model and prompt template
 model = OllamaLLM(model="llama3")
@@ -36,11 +37,11 @@ class BotResponse(BaseModel):
 class UserResponse(BaseModel):
     responses: Dict[str, str]
 
-class Resume(BaseModel):
-    resume: str
-
 user_data: Dict[str, str] = {}
 current_question_index: int = 0
+
+# Jinja2 environment setup
+env = Environment(loader=FileSystemLoader('templates'))
 
 # Function to get the next question
 def get_next_question():
@@ -74,10 +75,11 @@ async def get_responses():
     return UserResponse(responses=user_data)
 
 # Endpoint to generate formatted resume
-@app.get("/generate_resume", response_model=Resume)
+@app.get("/generate_resume", response_class=HTMLResponse)
 async def generate_resume():
-    resume = format_resume(user_data)
-    return Resume(resume=resume)
+    template = env.get_template('resume_template.html')
+    resume_html = template.render(user_data)
+    return HTMLResponse(content=resume_html)
 
 # Run the server
 if __name__ == "__main__":
