@@ -45,6 +45,12 @@ curl -X GET "http://127.0.0.1:8000/responses"
 ### Project Structure
 **main.py**: The main FastAPI application code. 
 
+**questions.py**: Contains the question definitions and keys.
+
+**resume_format.py**: Contains the function to format the resume.
+
+**resume_template.html**: The HTML template for the resume.
+
 **requirements.txt**: List of Python dependencies.
 
 **README.md**: Project overview and setup instructions.
