@@ -5,6 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import LLMChain
 from typing import List, Dict
 from questions import questions, Question
+from resume_format import format_resume
 
 # Initialize the model and prompt template
 model = OllamaLLM(model="llama3")
@@ -34,6 +35,9 @@ class BotResponse(BaseModel):
 
 class UserResponse(BaseModel):
     responses: Dict[str, str]
+
+class Resume(BaseModel):
+    resume: str
 
 user_data: Dict[str, str] = {}
 current_question_index: int = 0
@@ -68,6 +72,12 @@ async def resume_bot(user_input: UserInput):
 @app.get("/responses", response_model=UserResponse)
 async def get_responses():
     return UserResponse(responses=user_data)
+
+# Endpoint to generate formatted resume
+@app.get("/generate_resume", response_model=Resume)
+async def generate_resume():
+    resume = format_resume(user_data)
+    return Resume(resume=resume)
 
 # Run the server
 if __name__ == "__main__":
