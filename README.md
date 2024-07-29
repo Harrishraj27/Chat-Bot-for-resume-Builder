@@ -16,5 +16,38 @@ Download and install Ollama from the links below:
 After installing, start Ollama with the command:
 ```sh
 ollama start
+```
+### Step 3: Pull and Run the Llama3 Model
 
-### Step 3: vnj
+Use the following commands to pull and run the Llama3 model:
+```sh
+ollama pull llama3
+ollama run llama3
+```
+### Step 4: Install Python Packages
+```sh
+pip install -r requirements.txt
+```
+### Step 5: Run the FastAPI Server
+```sh
+uvicorn main:app --reload
+```
+
+### Usage
+To interact with the chatbot, you can use curl or any API client to send POST requests. Example:
+```sh
+curl -X POST "http://127.0.0.1:8000/resume_bot" -H "Content-Type: application/json" -d '{"context": "", "question": "What is your full name?"}'
+```
+To retrieve all responses:
+```sh
+curl -X GET "http://127.0.0.1:8000/responses"
+```
+### Project Structure
+**main.py**: The main FastAPI application code. 
+
+**requirements.txt**: List of Python dependencies.
+
+**README.md**: Project overview and setup instructions.
+
+**.gitignore**: Git ignore file.
+
