@@ -1,0 +1,13 @@
+frontend/
+├── assets/
+├── components/
+│   └── QuestionForm.vue
+├── layouts/
+├── pages/
+│   └── index.vue
+├── plugins/
+├── static/
+├── store/
+├── nuxt.config.js
+├── package.json
+└── README.md
