@@ -11,6 +11,13 @@ cd frontend
 npm install
 ```
 
+### Step 2: Run the Nuxt.js Development Server
+
+Start the Nuxt.js development server:
+```sh
+npm run dev
+```
+
 ## File Contents
 
 - **assets/**:
