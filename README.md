@@ -60,26 +60,6 @@ curl -X GET "http://127.0.0.1:8000/responses"
 | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
 | <img src="https://i.imgur.com/cxplXOW.jpg" width="200px" /> | <img src="https://i.imgur.com/Y9f7qsh.jpg" width="200px" /> | <img src="https://i.imgur.com/h4kQxy2.jpg" width="200px" /> |
 
-## Steps to create the Nuxt.js project:
-### Step 1: Initialize the Nuxt.js Project:
-```sh
-npx create-nuxt-app resume-builder
-cd resume-builder
-```
-
-### Step 2: Install Axios for HTTP requests and Configure Axios in nuxt.config.js
-```sh
-npm install @nuxtjs/axios
-```
-
-### Step 3: Create Components and Pages
-Codes are mentioned in the above file 
-### Step 4: Run the Nuxt.js App
-Ensure your FastAPI backend is running. Then start the Nuxt.js development server:
-```sh
-npm run dev
-```
-Your Nuxt.js app should now be running at `http://localhost:3000`.
 
 ### Final Steps
 
