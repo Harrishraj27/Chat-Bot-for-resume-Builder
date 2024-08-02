@@ -1,8 +1,8 @@
 {
-  "name": "resume-builder",
+  "name": "frontend",
   "version": "1.0.0",
-  "description": "A resume builder application using Nuxt.js and FastAPI",
-  "author": "Your Name",
+  "description": "Nuxt.js frontend for Resume Builder",
+  "author": "Your Name <your-email@example.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.2",
     "nuxt": "^2.15.8"
   }
 }
