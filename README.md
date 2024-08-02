@@ -46,6 +46,19 @@ To retrieve all responses:
 ```sh
 curl -X GET "http://127.0.0.1:8000/responses"
 ```
+## Templates
+
+| Azurill                                                      | Bronzor                                                     | Chikorita                                                   |
+| ------------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="https://i.imgur.com/jKgo04C.jpeg" width="200px" /> | <img src="https://i.imgur.com/DFNQZP2.jpg" width="200px" /> | <img src="https://i.imgur.com/Dwv8Y7f.jpg" width="200px" /> |
+
+| Ditto                                                       | Kakuna                                                      | Nosepass                                                    |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="https://i.imgur.com/6c5lASL.jpg" width="200px" /> | <img src="https://i.imgur.com/268ML3t.jpg" width="200px" /> | <img src="https://i.imgur.com/npRLsPS.jpg" width="200px" /> |
+
+| Onyx                                                        | Pikachu                                                     | Rhyhorn                                                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="https://i.imgur.com/cxplXOW.jpg" width="200px" /> | <img src="https://i.imgur.com/Y9f7qsh.jpg" width="200px" /> | <img src="https://i.imgur.com/h4kQxy2.jpg" width="200px" /> |
 
 ## Steps to create the Nuxt.js project:
 ### Step 1: Initialize the Nuxt.js Project:
