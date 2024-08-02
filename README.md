@@ -46,31 +46,6 @@ To retrieve all responses:
 ```sh
 curl -X GET "http://127.0.0.1:8000/responses"
 ```
-### Backend (FastAPI)
-**main.py**: The main FastAPI application code.
-
-**questions.py**: Contains the question definitions and keys.
-
-**resume_format.py**: Contains the function to format the resume.
-
-**templates/resume_template.html**: The HTML template for the resume.
-
-**requirements.txt**: List of Python dependencies.
-
-**README.md**: Project overview and setup instructions.
-
-**.gitignore**: Git ignore file.
-
-### Frontend (Nuxt.js)
-**components/QuestionForm.vue**: Component for handling user inputs and displaying questions.
-
-**pages/index.vue**: Main page for the resume builder.
-
-**nuxt.config.js**: Nuxt.js configuration file.
-
-**package.json**: Node.js dependencies and scripts.
-
-**README.md**: Project overview and setup instructions.
 
 ## Steps to create the Nuxt.js project:
 ### Step 1: Initialize the Nuxt.js Project:
