@@ -66,7 +66,7 @@ Ensure your FastAPI backend is running. Then start the Nuxt.js development serve
 ```sh
 npm run dev
 ```
-Your Nuxt.js app should now be running at http://localhost:3000.
+Your Nuxt.js app should now be running at `http://localhost:3000`.
 
 ### Final Steps
 
