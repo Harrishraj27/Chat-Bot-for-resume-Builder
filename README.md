@@ -1,10 +1,10 @@
 # Resume Builder ChatBot
 
-This project contains a full-fledged web application for building resumes using FastAPI for the backend and Nuxt.js for the frontend.
+This project contains a full-fledged web application for building resumes using Groq for the backend and Nuxt.js for the frontend.
 
 ## Backend (FastAPI)
 
-The FastAPI backend handles the chatbot logic and interacts with the LLMChain model from LangChain and Ollama to build a resume.
+The Groq backend handles the chatbot logic and interacts with the LLMChain model from LangChain and Ollama to build a resume.
 
 ## Installation and Setup
 
@@ -83,4 +83,7 @@ Your Nuxt.js app should now be running at http://localhost:3000.
     ```
 
 Navigate to `http://localhost:3000` to interact with your resume builder application.
+
+
+This README file provides a clear and comprehensive guide to setting up and running the frontend of the Resume Builder application. The provided Vue components, Nuxt.js configuration, and directory structure help organize the project effectively.
 
