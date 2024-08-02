@@ -1,3 +1,16 @@
+# Resume Builder Frontend
+This is the frontend part of the Resume Builder application, built with Nuxt.js.
+
+## Setup Instructions
+
+### Step 1: Install Dependencies
+
+Navigate to the `frontend` directory and install the dependencies:
+```sh
+cd frontend
+npm install
+```
+
 ## File Contents
 
 - **assets/**:
