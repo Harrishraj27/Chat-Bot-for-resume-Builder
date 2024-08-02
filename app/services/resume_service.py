@@ -1,9 +1,11 @@
+import requests
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import LLMChain
 from fastapi.responses import HTMLResponse
 from jinja2 import Environment, FileSystemLoader
 from app.questions import questions
+from app.settings import settings
 
 model = OllamaLLM(model="llama3")
 template = """
@@ -49,3 +51,12 @@ def generate_resume():
     template = env.get_template('resume_template.html')
     resume_html = template.render(user_data)
     return HTMLResponse(content=resume_html)
+
+def call_groq_api(endpoint, data):
+    headers = {
+        'Authorization': f'Bearer {settings.GROQ_API_KEY}',
+        'Content-Type': 'application/json'
+    }
+    response = requests.post(endpoint, json=data, headers=headers)
+    response.raise_for_status()
+    return response.json()
