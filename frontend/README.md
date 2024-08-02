@@ -1,10 +1,10 @@
 File Contents
-assets/:
+- **assets/**:
 
 This directory is for uncompiled assets such as LESS, SASS, or JavaScript files.
-plugins/:
+-**plugins/**:
 
 This directory is for Nuxt.js plugins to extend the application's capabilities.
-static/:
+-**static/**:
 
 This directory is for static files such as images, which will be served directly.
