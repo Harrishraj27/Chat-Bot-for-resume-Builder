@@ -92,3 +92,20 @@ Ensure your FastAPI backend is running. Then start the Nuxt.js development serve
 npm run dev
 ```
 Your Nuxt.js app should now be running at http://localhost:3000.
+
+### Final Steps
+
+1. **Backend**: Ensure the FastAPI backend is running:
+    ```sh
+    cd backend
+    uvicorn app.main:app --reload
+    ```
+
+2. **Frontend**: Start the Nuxt.js development server:
+    ```sh
+    cd frontend
+    npm run dev
+    ```
+
+Navigate to `http://localhost:3000` to interact with your resume builder application.
+
